@@ -1,0 +1,10 @@
+config:
+    # fourzerobox defines
+    # enable 010/420 ADC channel
+    ADC_010_420: true
+    # enable 010/420 ADC channel
+    ADC_RESISTIVE: true
+    # enable 010/420 ADC channel
+    ADC_CURRENT: true
+    # debug print
+    DEBUG_FZB: true

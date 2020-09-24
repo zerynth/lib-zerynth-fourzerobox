@@ -1,0 +1,11 @@
+config:
+    # fourzerobox defines
+    # enable gsm connection
+    NETWORK_GSM: true
+    # enable 010/420 ADC channel
+    ADC_010_420: true
+    # enable 010/420 ADC channel
+    ADC_RESISTIVE: true
+    # debug print
+    DEBUG_FZB: true
+

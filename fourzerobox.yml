@@ -1,0 +1,50 @@
+config:
+    FZB_V7: null
+
+
+options:
+    # fourzerobox defines
+    # enable ethernet connection
+    NETWORK_ETH: 
+        help: >
+            Set to 'true' to enable ethernet connection; set to null to disable
+    # enable wifi connection
+    NETWORK_WIFI: 
+        help: >
+            Set to 'true' to enable wifi connection; set to null to disable
+    # enable gsm connection
+    NETWORK_GSM: 
+        help: >
+            Set to 'true' to enable gsm connection; set to null to disable
+    # enable 010/420 ADC channel
+    ADC_010_420: 
+        help: >
+            Set to 'true' to enable 4-20mA and 0-10V ADC channels; set to null to disable
+    # enable 010/420 ADC channel
+    ADC_RESISTIVE: 
+        help: >
+            Set to 'true' to enable Resistive ADC channels; set to null to disable
+    # enable 010/420 ADC channel
+    ADC_CURRENT:
+        help: >
+            Set to 'true' to enable Current ADC channels; set to null to disable
+    # enable SD Card
+    SDCARD_ENABLED: 
+        help: >
+            Set to 'true' to enable SD card management; set to null to disable
+    # enable can peripheral
+    CAN_ENABLED:
+        help: >
+            Set to 'true' to enable CAN communication; set to null to disable
+    # enable RS485 peripheral
+    RS485_ENABLED: 
+        help: >
+            Set to 'true' to enable RS485 communication; set to null to disable
+    # enable RS232 peripheral
+    RS232_ENABLED: 
+        help: >
+            Set to 'true' to enable RS232 communication; set to null to disable
+    # enable DEBUG for fourzerobox
+    DEBUG_FZB: 
+        help: >
+            Set to 'true' to enable debug print; set to null to disable

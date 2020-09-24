@@ -1,0 +1,15 @@
+---
+description: Driver for enabling and handling all Zerynth 4ZeroBox features
+fullname: lib.zerynth.fourzerobox
+info:
+    chip_manufacturer: Zerynth
+    chip_name: ESP32
+    name: 4ZeroBox
+    type: Industrial Toolkit
+keywords:
+- zerynth
+- 4zerobox
+- iiot solution
+- industry 4.0
+title: Library for Zerynth 4ZeroBox
+...
