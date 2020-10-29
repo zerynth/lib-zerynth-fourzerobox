@@ -717,6 +717,7 @@ class FourZeroBox():
 #-if RS485_ENABLED
     def _init_rs485(self):
         # rs485 init
+        self.tim = None
         self.rs485 = streams.serial(drvname=SERIAL1, baud=BAUD_485, set_default=False)
 #-endif
 #-if RS232_ENABLED
@@ -1367,19 +1368,25 @@ class FourZeroBox():
 
         '''
         self._rs485_receive()
-        t = timers.timer()
+        if self.tim == None:
+            self.tim = timers.timer()
+            self.tim.start()
+        else:
+            self.tim.reset()
         # self.lockSERIAL1.acquire()
-        t.start()
         while not self.rs485.available():
-            if t.get() > timeout:
+            if self.tim.get() > timeout:
                 # self.lockSERIAL1.release()
-                return None
+                break
             sleep(1)
+        sleep(10)
+        msg = []
         n = self.rs485.available()
-        msg = self.rs485.read(n)
+        if n>0:
+            msg = self.rs485.read(n)
         # self.lockSERIAL1.release()
         return msg
-
+    
     def write_rs485(self, msg):
         '''
         
@@ -1659,3 +1666,4 @@ class FourZeroBox():
             pass
         self.lockFLASH.release()
         return fs.bb
+

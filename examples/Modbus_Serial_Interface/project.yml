@@ -1,5 +1,4 @@
 config:
-    MODBUS_TCP: null
     MODBUS_SERIAL: true
     
     DEBUG_FZB: true
